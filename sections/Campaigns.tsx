@@ -1,4 +1,7 @@
-import { ImageWidget as Image } from "apps/admin/widgets.ts";
+import {
+  ImageWidget as Image,
+  VideoWidget as Video,
+} from "apps/admin/widgets.ts";
 import ScrollTriggeredTextMotionIsland from "../islands/ScrollTriggeredTextMotionIsland.tsx";
 import CountUpIsland from "../islands/CountUpIsland.tsx";
 import HoverVideoIsland from "../islands/HoverVideoIsland.tsx";
@@ -13,7 +16,7 @@ export interface CampaignCard {
    * @title Campaign Video
    * @description Video to play on hover
    */
-  video?: string;
+  video?: Video;
   /**
    * @title Flag Icon
    */
@@ -90,6 +93,7 @@ export default function Campaigns({
 }: Props) {
   return (
     <section
+      id="campanhas"
       data-scroll-section
       data-section-theme={theme}
       class="relative w-full bg-background px-4 sm:px-6 lg:px-20 py-20"

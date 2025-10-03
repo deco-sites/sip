@@ -136,38 +136,38 @@
       "leftCard": {
         "title": "Diagnóstico Estratégico",
         "description": "Frameworks testados em 150 campanhas para revelar percepções, riscos e oportunidades da sua candidatura.",
-        "image": "https://placehold.co/640x910/242a2a/ccff00?text=Diagnostico",
+        "image": "https://assets.decocache.com/sip/f1f6cae2-4bb0-4a73-8f4b-080cee719a12/diagnotsico.png",
         "imageAlt": "Diagnóstico Estratégico"
       },
       "rightTopCard": {
         "title": "Riqueza de Dados",
         "description": "A mais ampla coleta de dados eleitorais, sociais e digitais já aplicada a campanhas políticas.",
-        "image": "https://placehold.co/635x265/242a2a/ccff00?text=Dados",
+        "image": "https://assets.decocache.com/sip/70938878-433a-4c98-8d16-c62f3ba3785d/dados.png",
         "imageAlt": "Riqueza de Dados"
       },
       "rightBottomCard": {
         "title": "Monitoramento em Tempo Real",
         "description": "Acompanhamento contínuo de redes sociais, imprensa e adversários, com alertas acionáveis.",
-        "image": "https://placehold.co/635x460/242a2a/ccff00?text=Monitoramento",
+        "image": "https://assets.decocache.com/sip/67366676-8dbc-4b81-851a-7fefcfc999a1/monitoramento.png",
         "imageAlt": "Monitoramento em Tempo Real"
       },
       "bottomCards": [
         {
           "title": "Direção Criativa Personalizada",
           "description": "Jingles, vídeos, slogans e narrativas produzidas com a ajuda de IA sem padrões genéricos.",
-          "image": "https://placehold.co/420x217/242a2a/ccff00?text=Criativa",
+          "image": "https://assets.decocache.com/sip/683d2659-e01c-4615-afc0-0e5f6cae63ce/direcao.png",
           "imageAlt": "Direção Criativa Personalizada"
         },
         {
           "title": "Painel Unificado de Pesquisas",
           "description": "Principais institutos + pesquisas exclusivas SIP em um painel consolidado e fácil de interpretar.",
-          "image": "https://placehold.co/420x217/242a2a/ccff00?text=Pesquisas",
+          "image": "https://assets.decocache.com/sip/e0904d2a-341a-4f41-83ad-920b55d0a232/painel.png",
           "imageAlt": "Painel Unificado de Pesquisas"
         },
         {
           "title": "Santana Chat",
           "description": "Assistente virtual treinado nos conteúdos de João Santana, disponível 24h para sua campanha.",
-          "image": "https://placehold.co/420x217/242a2a/ccff00?text=Chat",
+          "image": "https://assets.decocache.com/sip/07cd25a3-7736-45e7-a027-edaee590ba1f/Chat.png",
           "imageAlt": "Santana Chat"
         }
       ],
@@ -194,7 +194,13 @@
           "image": "https://assets.decocache.com/sip/989f762d-06b6-49cc-8e98-1dfbda74baa6/dilma.png",
           "flagIcon": "https://flagcdn.com/w40/br.png",
           "name": "Dilma",
-          "year": "2010 e 2014"
+          "year": "2010 e 2014",
+          "video": "https://assets.decocache.com/sip/adfc4e15-84e4-48a7-b31c-d87a811b1e83/141020_Proposta_Jovem_Aprendiz_SS.mp4"
+        },
+        {
+          "image": "https://assets.decocache.com/sip/aef4b4b5-57e8-4a86-aa30-9877d9feb6b5/haddad.png",
+          "name": "Fernando Haddad",
+          "video": "https://assets.decocache.com/sip/d7b6c2bc-b889-4bdb-92f6-9b2901958548/120828_COM_REDE_HORA_CERTA_BASE_LIMPA.mp4"
         },
         {
           "image": "https://assets.decocache.com/sip/12abcdd4-0c1a-4d2c-92fb-1ebb11443d33/lula.png",
@@ -210,13 +216,9 @@
         },
         {
           "image": "https://assets.decocache.com/sip/3190e2c9-8aa8-43c3-965f-f441e104b0d1/mauricio.png",
-          "flagIcon": "https://flagcdn.com/w40/sv.png",
           "name": "Mauricio Funes",
+          "flagIcon": "https://flagcdn.com/w40/sv.png",
           "year": "2024"
-        },
-        {
-          "image": "https://assets.decocache.com/sip/aef4b4b5-57e8-4a86-aa30-9877d9feb6b5/haddad.png",
-          "name": "Fernando Haddad"
         },
         {
           "image": "https://assets.decocache.com/sip/4535840a-7d9e-4d12-af71-34f9b4e73957/josemanuel.png",

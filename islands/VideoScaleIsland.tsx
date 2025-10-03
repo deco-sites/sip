@@ -14,6 +14,35 @@ export default function VideoScaleIsland({ children }: Props) {
     const container = containerRef.current;
     if (!container) return;
 
+    // Update Locomotive Scroll when video/iframe loads
+    const updateLocomotiveScroll = () => {
+      const locomotiveScroll =
+        (globalThis as typeof globalThis & {
+          locomotiveScroll?: { update: () => void };
+        }).locomotiveScroll;
+      if (locomotiveScroll?.update) {
+        locomotiveScroll.update();
+      }
+    };
+
+    // Listen for iframe/video/image loads
+    const iframe = container.querySelector("iframe");
+    const video = container.querySelector("video");
+    const img = container.querySelector("img");
+
+    if (iframe) {
+      iframe.addEventListener("load", updateLocomotiveScroll);
+    }
+    if (video) {
+      video.addEventListener("loadedmetadata", updateLocomotiveScroll);
+    }
+    if (img) {
+      img.addEventListener("load", updateLocomotiveScroll);
+    }
+
+    // Force update after mount
+    setTimeout(updateLocomotiveScroll, 100);
+
     let hasReachedCenter = false;
 
     const handleScroll = () => {
@@ -79,6 +108,21 @@ export default function VideoScaleIsland({ children }: Props) {
     return () => {
       globalThis.removeEventListener("scroll", handleScroll);
       globalThis.removeEventListener("locomotive-scroll", handleScroll);
+
+      // Clean up event listeners
+      const iframe = container.querySelector("iframe");
+      const video = container.querySelector("video");
+      const img = container.querySelector("img");
+
+      if (iframe) {
+        iframe.removeEventListener("load", updateLocomotiveScroll);
+      }
+      if (video) {
+        video.removeEventListener("loadedmetadata", updateLocomotiveScroll);
+      }
+      if (img) {
+        img.removeEventListener("load", updateLocomotiveScroll);
+      }
     };
   }, []);
 

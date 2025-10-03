@@ -60,6 +60,7 @@ export default function Challenge({
 }: Props) {
   return (
     <section
+      id="solucao"
       data-scroll-section
       data-section-theme={theme}
       class="relative w-full bg-background px-4 sm:px-6 lg:px-20 py-20 lg:py-40"

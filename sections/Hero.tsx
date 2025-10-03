@@ -168,45 +168,45 @@ export default function Hero({
             data-scroll-speed="0.5"
             src={bgDecorationBehindImage}
             alt=""
-            class="absolute bottom-0 -left-40 w-auto h-[400px] pointer-events-none"
+            class="absolute bottom-0 -left-20 lg:-left-40 w-auto h-[250px] lg:h-[400px] pointer-events-none"
             style={{ zIndex: 1 }}
             loading="lazy"
           />
         )}
 
-        {/* Background Decoration Behind Text (Right) - z-index 1, positioned at bottom of container */}
+        {/* Background Decoration Behind Text (Right) - z-index 1, positioned at bottom of container - HIDDEN ON MOBILE */}
         {bgDecorationRight && (
           <img
             data-scroll
             data-scroll-speed="-1"
             src={bgDecorationRight}
             alt=""
-            class="absolute bottom-0 right-0 w-auto h-[600px] lg:h-[820px] pointer-events-none translate-x-32 opacity-90"
+            class="hidden lg:block absolute bottom-0 right-0 w-auto h-[600px] lg:h-[820px] pointer-events-none translate-x-32 opacity-90"
             style={{ zIndex: 1 }}
             loading="lazy"
           />
         )}
 
-        {/* Main Layout - Flex row with image left, content right */}
-        <div class="flex flex-col lg:flex-row items-end justify-between gap-8 lg:gap-16 min-h-[820px]">
+        {/* Main Layout - Mobile: column-reverse (text top, image bottom) | Desktop: row (image left, content right) */}
+        <div class="flex flex-col-reverse lg:flex-row items-end justify-between gap-4 lg:gap-16 min-h-[820px] pt-56 lg:pt-0">
           {/* LEFT SIDE - Image with overlaid person info */}
           <div class="relative w-full lg:w-[639px] flex-shrink-0">
             {/* Hero Image - z-index 3 */}
             {heroImage && (
               <div
-                class="relative w-full h-[600px] lg:h-[820px] rounded-lg"
+                class="relative w-full h-[450px] lg:h-[820px] rounded-lg"
                 style={{ zIndex: 3 }}
               >
                 <img
                   src={heroImage}
                   alt={heroImageAlt}
-                  class="w-full h-full object-cover object-center"
+                  class="w-full h-full object-cover object-top lg:object-center"
                   loading="eager"
                 />
 
-                {/* Person Info - Overlaid on center left of image */}
+                {/* Person Info - Mobile: bottom right | Desktop: center left */}
                 {personName && (
-                  <div class="absolute top-1/2 -translate-y-1/2 -left-10 flex items-start gap-2 text-lg lg:text-2xl ">
+                  <div class="absolute bottom-8 lg:top-1/2 mt-24 lg:-translate-y-1/2 right-2 lg:-left-10 lg:right-auto flex items-start gap-2 text-base lg:text-2xl">
                     <span class="text-foreground font-medium whitespace-nowrap">
                       {personName}
                     </span>
@@ -229,11 +229,11 @@ export default function Hero({
           </div>
 
           {/* RIGHT SIDE - Content */}
-          <div class="relative flex flex-col items-start justify-center gap-8 lg:gap-12 flex-grow lg:px-10 lg:py-32">
+          <div class="relative flex flex-col items-start justify-center gap-4 lg:gap-12 flex-grow lg:px-10 lg:py-32 mb-0 lg:mb-0">
             {/* Headline - z-index 2 */}
             {headline && (
               <h1
-                class="relative text-4xl sm:text-5xl lg:text-6xl font-medium leading-[1.1] tracking-tight"
+                class="relative text-4xl lg:text-6xl font-medium leading-[1.1] tracking-tight"
                 style={{ zIndex: 2 }}
               >
                 <TextMotionIsland
@@ -280,10 +280,21 @@ export default function Hero({
           class="absolute bottom-6 left-1/2 -translate-x-1/2"
           style={{ zIndex: 20 }}
         >
+          <style>
+            {`
+              @keyframes smooth-jump {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-12px); }
+              }
+            `}
+          </style>
           <img
             src={scrollIndicatorSvg}
             alt="Scroll down"
             class="w-4 h-4 opacity-80"
+            style={{
+              animation: "smooth-jump 2s ease-in-out infinite",
+            }}
             loading="lazy"
           />
         </div>

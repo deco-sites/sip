@@ -45,9 +45,10 @@ export default function FinalCTA({
 }: Props) {
   return (
     <section
+      id="contato"
       data-scroll-section
       data-section-theme={theme}
-      class="relative w-full min-h-screen flex items-center justify-end px-4 sm:px-6 lg:px-20 py-20"
+      class="relative w-full min-h-screen flex items-center justify-center lg:justify-end px-4 sm:px-6 lg:px-20 py-20"
     >
       {/* Background Image */}
       <div class="absolute inset-0">
@@ -61,10 +62,13 @@ export default function FinalCTA({
         )}
       </div>
 
-      {/* Content - Right Side */}
-      <div class="relative z-10 w-full max-w-[452px] flex flex-col gap-10 p-3">
+      {/* Dark overlay on mobile for better text readability */}
+      <div class="absolute inset-0 bg-black/50 lg:bg-transparent" />
+
+      {/* Content - Centered on mobile, right side on desktop */}
+      <div class="relative z-10 w-full max-w-[452px] flex flex-col gap-6 lg:gap-10 p-3">
         {/* Headline */}
-        <h2 class="text-4xl sm:text-5xl lg:text-[48px] font-medium leading-[1.2] tracking-tight">
+        <h2 class="text-3xl lg:text-[48px] font-medium leading-[1.2] tracking-tight">
           <ScrollTextMotionIsland
             text={headlinePart1}
             wordClass="text-accent"

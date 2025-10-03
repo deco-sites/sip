@@ -71,6 +71,7 @@ export default function Features({
 }: Props) {
   return (
     <section
+      id="como-funciona"
       data-scroll-section
       data-section-theme={theme}
       class="relative w-full bg-background px-4 sm:px-6 lg:px-20 py-10 lg:py-16"
@@ -95,7 +96,7 @@ export default function Features({
                 </div>
 
                 {/* Card Image Frame */}
-                <div class="flex-1 bg-muted w-full min-h-0">
+                <div class="flex-1 w-full min-h-0">
                   {leftCard.image && (
                     <img
                       src={leftCard.image}
@@ -124,7 +125,7 @@ export default function Features({
                   </div>
 
                   {/* Card Image Frame */}
-                  <div class="flex-1 bg-muted w-full min-h-0">
+                  <div class="flex-1 w-full min-h-0">
                     {rightTopCard.image && (
                       <img
                         src={rightTopCard.image}
@@ -151,7 +152,7 @@ export default function Features({
                   </div>
 
                   {/* Card Image Frame */}
-                  <div class="flex-1 bg-muted w-full min-h-0">
+                  <div class="flex-1 w-full min-h-0">
                     {rightBottomCard.image && (
                       <img
                         src={rightBottomCard.image}
@@ -184,7 +185,7 @@ export default function Features({
                 </div>
 
                 {/* Card Image Frame */}
-                <div class="flex-1 bg-muted w-full min-h-0">
+                <div class="flex-1 w-full min-h-0">
                   {card.image && (
                     <img
                       src={card.image}

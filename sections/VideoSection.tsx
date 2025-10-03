@@ -91,11 +91,6 @@ export default function VideoSection({
       data-scroll-section
       data-section-theme={theme}
       class="relative w-full flex flex-col items-center justify-center bg-background px-4 sm:px-6 lg:px-8 py-20 gap-10"
-      style={{
-        isolation: "isolate",
-        contain: "layout style paint",
-        transform: "translateZ(0)",
-      }}
     >
       {/* Main Content Container - 1280px max-width */}
       <div class="w-full max-w-[1280px] mx-auto flex flex-col items-center gap-10">
@@ -136,7 +131,6 @@ export default function VideoSection({
                   class="w-full h-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                  loading="lazy"
                 />
               )
               : videoSrc
@@ -183,7 +177,7 @@ export default function VideoSection({
           <div class="relative w-full max-w-[1280px]">
             {/* Top Left Quote Mark */}
             <div
-              class="absolute -top-4 left-[110px] text-[140px] leading-none text-white z-20"
+              class="absolute -top-4 left-4 lg:left-[110px] text-[80px] lg:text-[140px] leading-none text-white z-20"
               style={{
                 fontFamily: "Allerta",
               }}
@@ -193,7 +187,7 @@ export default function VideoSection({
 
             {/* Bottom Right Quote Mark (rotated) */}
             <div
-              class="absolute -bottom-3 right-[124px] text-[140px] leading-none text-white z-20"
+              class="absolute -bottom-3 right-4 lg:right-[124px] text-[80px] lg:text-[140px] leading-none text-white z-20"
               style={{
                 fontFamily: "Allerta",
                 transform: "rotate(180deg)",
@@ -203,7 +197,7 @@ export default function VideoSection({
             </div>
 
             {/* Content Container */}
-            <div class="relative w-full px-[100px] py-12 flex flex-col gap-1 items-center justify-center">
+            <div class="relative w-full px-6 lg:px-[100px] py-8 lg:py-12 flex flex-col gap-1 items-center justify-center">
               {/* Skewed background */}
               <div
                 class="absolute inset-0 bg-accent"
@@ -215,17 +209,17 @@ export default function VideoSection({
               {/* Statement Lines */}
               <div class="relative z-10 flex flex-col gap-1 items-center justify-center w-full">
                 {statementLine1 && (
-                  <p class="text-3xl lg:text-4xl font-medium italic text-accent-foreground leading-[1.2] tracking-tight text-center">
+                  <p class="text-xl lg:text-4xl font-medium italic text-accent-foreground leading-[1.2] tracking-tight text-center">
                     {statementLine1}
                   </p>
                 )}
                 {statementLine2 && (
-                  <p class="text-3xl lg:text-4xl font-medium italic text-accent-foreground leading-[1.2] tracking-tight text-center px-6">
+                  <p class="text-xl lg:text-4xl font-medium italic text-accent-foreground leading-[1.2] tracking-tight text-center">
                     {statementLine2}
                   </p>
                 )}
                 {statementLine3 && (
-                  <p class="text-3xl lg:text-4xl font-medium italic text-accent-foreground leading-[1.2] tracking-tight text-center px-8">
+                  <p class="text-xl lg:text-4xl font-medium italic text-accent-foreground leading-[1.2] tracking-tight text-center">
                     {statementLine3}
                   </p>
                 )}
