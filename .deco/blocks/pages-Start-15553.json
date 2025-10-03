@@ -3,12 +3,334 @@
   "path": "/",
   "sections": [
     {
-      "__resolveType": "site/sections/ItWorks.tsx",
-      "name": "<p>It Works!</p>",
-      "count": 1
+      "__resolveType": "site/sections/Navbar.tsx",
+      "theme": "dark",
+      "logoImage": "https://assets.decocache.com/sip/7a4fe718-5fc6-4c19-925f-c38480a84cc3/siplogo.svg",
+      "logoAlt": "S/P Santana Inteligência Política",
+      "leftLinks": [
+        {
+          "text": "Solução",
+          "href": "#solucao"
+        },
+        {
+          "text": "Campanhas",
+          "href": "#campanhas"
+        }
+      ],
+      "rightLinks": [
+        {
+          "text": "Como funciona",
+          "href": "#como-funciona"
+        },
+        {
+          "text": "Conhecer mais",
+          "href": "#contato"
+        }
+      ]
     },
     {
-      "__resolveType": "Footer"
+      "__resolveType": "site/sections/Hero.tsx",
+      "theme": "dark",
+      "heroImage": "https://assets.decocache.com/sip/ec18a465-887f-46f7-95cc-9bf7413b1d17/Card.png",
+      "heroImageAlt": "João Santana - Estrategista de Marketing Político",
+      "bgDecorationBehindImage": "https://assets.decocache.com/sip/391aaa5f-d62e-45bd-be20-44781095e8c9/decoration-02.svg",
+      "bgDecorationRight": "https://assets.decocache.com/sip/4041217c-1b0b-4602-8060-90c5e421446f/decoration-01.svg",
+      "personName": "João Santana",
+      "personTitleLine1": "Estrategista",
+      "personTitleLine2": "Marketing",
+      "personTitleLine3": "Político",
+      "headline": "/ A inteligência que elegeu 8 presidentes agora pode",
+      "highlightedText": "eleger você. /",
+      "ctaText": "Conhecer mais",
+      "ctaLink": "#contato",
+      "logos": [
+        {
+          "image": "https://placehold.co/164x40/444/gray?text=Chavez",
+          "alt": "Chávez"
+        },
+        {
+          "image": "https://placehold.co/164x40/444/gray?text=Lula",
+          "alt": "Lula"
+        },
+        {
+          "image": "https://placehold.co/164x40/444/gray?text=Dilma",
+          "alt": "Dilma"
+        },
+        {
+          "image": "https://placehold.co/164x40/444/gray?text=Mauricio",
+          "alt": "Maurício"
+        },
+        {
+          "image": "https://placehold.co/164x40/444/gray?text=Logo5",
+          "alt": "Logo 5"
+        },
+        {
+          "image": "https://placehold.co/164x40/444/gray?text=Logo6",
+          "alt": "Logo 6"
+        },
+        {
+          "image": "https://placehold.co/164x40/444/gray?text=Logo7",
+          "alt": "Logo 7"
+        },
+        {
+          "image": "https://placehold.co/164x40/444/gray?text=Logo8",
+          "alt": "Logo 8"
+        }
+      ],
+      "scrollIndicatorSvg": "https://assets.decocache.com/sip/4b8a5f25-5698-4d96-b659-e94af30f5b0b/arrow.svg",
+      "dotSize": 1,
+      "dotSpacing": 4,
+      "dotColor": "rgba(255,255,255,0.1)"
+    },
+    {
+      "__resolveType": "site/sections/Challenge.tsx",
+      "theme": "green",
+      "headlineStart": "Ganhar uma eleição hoje é estar em",
+      "headlineHighlight": "todos os lugares ao mesmo tempo",
+      "mediaItems": [
+        {
+          "media": "https://assets.decocache.com/sip/7a0f52ff-b689-4d1f-ad4e-2c2e35784304/card-01.png",
+          "alt": "Media 1",
+          "text": "TV, WhatsApp, TikTok, Imprensa, Ruas"
+        },
+        {
+          "media": "https://assets.decocache.com/sip/b577cf02-4d7a-4a54-8670-1d77698e3e4f/card-02.png",
+          "alt": "Media 2",
+          "text": "A cada segundo, novas informações, novos ataques, novos movimentos"
+        },
+        {
+          "media": "https://assets.decocache.com/sip/c7c55e50-3b6d-42e2-a3ee-77bc2129cd18/card-03.png",
+          "alt": "Media 3",
+          "text": "...e uma fake news pode derrubar dias de trabalho."
+        }
+      ],
+      "ctaText": "Como transformar segundos de atenção em confiança e, depois, em votos?"
+    },
+    {
+      "__resolveType": "site/sections/AboutPlatform.tsx",
+      "theme": "dark",
+      "logoImage": "https://assets.decocache.com/sip/e33a8fe8-b675-47e3-b28e-ad3c101c87de/SIP.svg",
+      "logoAlt": "S/P Santana Inteligência Política",
+      "topDescription": "Décadas de experiência de João Santana, somadas ao poder da Inteligência Artificial, em uma plataforma criada para transformar dados em vitórias",
+      "highlightedName": "João Santana",
+      "bottomDescription": "/ O resultado: / diagnósticos profundos, estratégias precisas e direções criativas hiper personalizadas, tornando sua campanha mais dinâmica e certeira.",
+      "dashboardImage": "https://assets.decocache.com/sip/1aa33227-eab9-47da-897b-f16400d2ac9a/sip-mcok.png",
+      "dashboardImageAlt": "Central de Inteligência Digital - Dashboard da plataforma S/P",
+      "bgDecorationBehindDashboard": "https://assets.decocache.com/sip/391aaa5f-d62e-45bd-be20-44781095e8c9/decoration-02.svg",
+      "dotSize": 1,
+      "dotSpacing": 40,
+      "dotColor": "rgba(255,255,255,0.05)",
+      "logoImage1": "https://assets.decocache.com/sip/f1ded053-42fc-44ba-abce-b3858900edca/sip-logo1.svg",
+      "logoImage2": "https://assets.decocache.com/sip/8ebb6fbb-b617-4e22-9eaa-81c5db769774/sip-logo2.svg",
+      "logoImage3": "https://assets.decocache.com/sip/8a763ecd-c61b-4339-95ff-d235f437182c/sip-logo3.svg",
+      "logoImage4": "https://assets.decocache.com/sip/9b84d237-6c39-41ee-9c22-c6f2bb3f3927/sip-logo4.svg"
+    },
+    {
+      "__resolveType": "site/sections/FeaturesHeadline.tsx",
+      "theme": "dark",
+      "headlineText": "Esta poderosa interface de expertise humana com IA facilitará, bastante, a vida de candidatos, consultores e assessores em qualquer modelo de campanha"
+    },
+    {
+      "__resolveType": "site/sections/Features.tsx",
+      "theme": "dark",
+      "leftCard": {
+        "title": "Diagnóstico Estratégico",
+        "description": "Frameworks testados em 150 campanhas para revelar percepções, riscos e oportunidades da sua candidatura.",
+        "image": "https://placehold.co/640x910/242a2a/ccff00?text=Diagnostico",
+        "imageAlt": "Diagnóstico Estratégico"
+      },
+      "rightTopCard": {
+        "title": "Riqueza de Dados",
+        "description": "A mais ampla coleta de dados eleitorais, sociais e digitais já aplicada a campanhas políticas.",
+        "image": "https://placehold.co/635x265/242a2a/ccff00?text=Dados",
+        "imageAlt": "Riqueza de Dados"
+      },
+      "rightBottomCard": {
+        "title": "Monitoramento em Tempo Real",
+        "description": "Acompanhamento contínuo de redes sociais, imprensa e adversários, com alertas acionáveis.",
+        "image": "https://placehold.co/635x460/242a2a/ccff00?text=Monitoramento",
+        "imageAlt": "Monitoramento em Tempo Real"
+      },
+      "bottomCards": [
+        {
+          "title": "Direção Criativa Personalizada",
+          "description": "Jingles, vídeos, slogans e narrativas produzidas com a ajuda de IA sem padrões genéricos.",
+          "image": "https://placehold.co/420x217/242a2a/ccff00?text=Criativa",
+          "imageAlt": "Direção Criativa Personalizada"
+        },
+        {
+          "title": "Painel Unificado de Pesquisas",
+          "description": "Principais institutos + pesquisas exclusivas SIP em um painel consolidado e fácil de interpretar.",
+          "image": "https://placehold.co/420x217/242a2a/ccff00?text=Pesquisas",
+          "imageAlt": "Painel Unificado de Pesquisas"
+        },
+        {
+          "title": "Santana Chat",
+          "description": "Assistente virtual treinado nos conteúdos de João Santana, disponível 24h para sua campanha.",
+          "image": "https://placehold.co/420x217/242a2a/ccff00?text=Chat",
+          "imageAlt": "Santana Chat"
+        }
+      ],
+      "ctaText": "Descobrir como a SIP pode me ajudar",
+      "ctaLink": "#contato"
+    },
+    {
+      "__resolveType": "site/sections/VideoSection.tsx",
+      "statementLine1": "A máquina ganha sensibilidade humana.",
+      "statementLine2": "A inteligência política ganha velocidade de máquina.",
+      "statementLine3": "Toda recomendação passa por curadores da nossa equipe.",
+      "image": "https://assets.decocache.com/sip/0cc382a2-8c61-45d1-8dca-24c62202c76d/sip-video.png"
+    },
+    {
+      "__resolveType": "site/sections/Campaigns.tsx",
+      "theme": "dark",
+      "headlineStart": "/ ",
+      "highlightedName": "João Santana",
+      "headlineEnd": " ajudou a escrever a história de 6 países inteiros. Agora, ele pode escrever a sua. /",
+      "statsNumber": "150",
+      "statsLabel": "Campanhas vitoriosas",
+      "largeCards": [
+        {
+          "image": "https://assets.decocache.com/sip/989f762d-06b6-49cc-8e98-1dfbda74baa6/dilma.png",
+          "flagIcon": "https://flagcdn.com/w40/br.png",
+          "name": "Dilma",
+          "year": "2010 e 2014"
+        },
+        {
+          "image": "https://assets.decocache.com/sip/12abcdd4-0c1a-4d2c-92fb-1ebb11443d33/lula.png",
+          "flagIcon": "https://flagcdn.com/w40/br.png",
+          "name": "Lula",
+          "year": "2006"
+        },
+        {
+          "image": "https://assets.decocache.com/sip/7d6cb8f6-e4b5-480c-9a3a-f966c8665d7c/jose.png",
+          "flagIcon": "https://flagcdn.com/w40/ao.png",
+          "name": "José Eduardo dos Santos",
+          "year": "2024"
+        },
+        {
+          "image": "https://assets.decocache.com/sip/3190e2c9-8aa8-43c3-965f-f441e104b0d1/mauricio.png",
+          "flagIcon": "https://flagcdn.com/w40/sv.png",
+          "name": "Mauricio Funes",
+          "year": "2024"
+        },
+        {
+          "image": "https://assets.decocache.com/sip/aef4b4b5-57e8-4a86-aa30-9877d9feb6b5/haddad.png",
+          "name": "Fernando Haddad"
+        },
+        {
+          "image": "https://assets.decocache.com/sip/4535840a-7d9e-4d12-af71-34f9b4e73957/josemanuel.png",
+          "name": "José Manuel de la Sota"
+        },
+        {
+          "image": "https://assets.decocache.com/sip/4c223439-4881-4c73-bc55-d4c41602eced/garibaldi.png",
+          "name": "Garibaldi Alves Filho"
+        },
+        {
+          "image": "https://assets.decocache.com/sip/4b4241d0-ad1f-4200-a368-eea54f88a4ae/juan.png",
+          "name": "Juan Schiaretti"
+        },
+        {
+          "image": "https://assets.decocache.com/sip/153433f8-d43c-46f1-93a3-5dccd64a6515/eduardo.png",
+          "name": "Eduardo Duhalde"
+        },
+        {
+          "image": "https://assets.decocache.com/sip/755ae198-284b-46ee-8b7f-d9fbeb41f38e/roberto.png",
+          "name": "Roberto Urquía"
+        }
+      ],
+      "smallCards": [
+        {
+          "image": "https://placehold.co/202x336/242a2a/ccff00?text=Dilma",
+          "flagIcon": "https://flagcdn.com/w40/br.png",
+          "name": "Dilma",
+          "year": "2010 e 2014"
+        },
+        {
+          "image": "https://placehold.co/202x336/242a2a/ccff00?text=Lula",
+          "flagIcon": "https://flagcdn.com/w40/br.png",
+          "name": "Lula",
+          "year": "2006"
+        },
+        {
+          "image": "https://placehold.co/202x336/242a2a/ccff00?text=Santos",
+          "flagIcon": "https://flagcdn.com/w40/ao.png",
+          "name": "José Eduardo dos Santos",
+          "year": "2024"
+        },
+        {
+          "image": "https://placehold.co/202x336/242a2a/ccff00?text=Funes",
+          "flagIcon": "https://flagcdn.com/w40/sv.png",
+          "name": "Mauricio Funes",
+          "year": "2024"
+        },
+        {
+          "image": "https://placehold.co/202x336/242a2a/ccff00?text=Card5",
+          "flagIcon": "https://flagcdn.com/w40/ve.png",
+          "name": "Mauricio Funes",
+          "year": "2024"
+        },
+        {
+          "image": "https://placehold.co/202x336/242a2a/ccff00?text=Card6",
+          "flagIcon": "https://flagcdn.com/w40/ve.png",
+          "name": "Mauricio Funes",
+          "year": "2024"
+        },
+        {
+          "image": "https://placehold.co/202x336/242a2a/ccff00?text=Card7",
+          "flagIcon": "https://flagcdn.com/w40/ve.png",
+          "name": "Mauricio Funes",
+          "year": "2024"
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Quote.tsx",
+      "theme": "dark",
+      "backgroundImage": "https://assets.decocache.com/sip/132d6c57-7a04-4c42-8e7c-cc03339b5dcc/sip-foto.png",
+      "headlinePart1": "Ganhar uma eleição presidencial pode ser sorte.",
+      "headlinePart2": "Ganhar oito, trata-se de marca insuperável.",
+      "photoCredit": "Foto: Ricardo Stuckert"
+    },
+    {
+      "__resolveType": "site/sections/CountrySelector.tsx",
+      "theme": "dark",
+      "autoRotateInterval": 4000,
+      "countries": [
+        {
+          "name": "Brasil",
+          "image": "https://assets.decocache.com/sip/e7511dc7-b686-47a6-b359-31ee0e0b2d3e/brasil.png"
+        },
+        {
+          "name": "Venezuela",
+          "image": "https://assets.decocache.com/sip/9bac832a-29ba-4a6b-ac42-733c747a884c/venezuela.png"
+        },
+        {
+          "name": "Rep. Dominicana",
+          "image": "https://assets.decocache.com/sip/7b67794e-0e2c-4012-aa74-777b16fc362d/rep-dominicana.png"
+        },
+        {
+          "name": "Angola",
+          "image": "https://assets.decocache.com/sip/82b178db-cd1f-403b-82e5-6542f09af4be/angola.webp"
+        },
+        {
+          "name": "Panamá",
+          "image": "https://assets.decocache.com/sip/e5cec2fc-bf9a-4e8c-9cdb-bc004aad7342/panama.jpg"
+        },
+        {
+          "name": "El Salvador",
+          "image": "https://assets.decocache.com/sip/ad797773-aeee-4bea-a4fa-599f3743886f/elsavador.jpg"
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/FinalCTA.tsx",
+      "theme": "dark",
+      "backgroundImage": "https://assets.decocache.com/sip/b63520a7-4e8c-4251-997b-5b164d4d9db3/cta.png",
+      "headlinePart1": "O próximo capítulo",
+      "headlinePart2": " da sua carreira política começa aqui.",
+      "ctaText": "Conhecer mais",
+      "ctaLink": "#contato"
     }
   ],
   "__resolveType": "website/pages/Page.tsx"

@@ -36,7 +36,9 @@
     "apps/": "https://cdn.jsdelivr.net/gh/deco-cx/apps@0.84.2/",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
+    "tailwindcss": "npm:tailwindcss@^4.0.0",
     "daisyui": "npm:daisyui@4.4.19",
+    "gsap": "npm:gsap@^3.12.5",
     "@deco/htmx": "https://cdn.jsdelivr.net/gh/deco-cx/apps@0.84.2/htmx/mod.ts",
     "https://esm.sh/*preact-render-to-string@6.3.1": "npm:preact-render-to-string@6.4.2",
     "@deco/deco": "jsr:@deco/deco@1.116.0",
@@ -78,11 +80,10 @@
       ]
     }
   },
-  "nodeModulesDir": false,
+  "nodeModulesDir": "none",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "preact",
-    "experimentalDecorators": true
+    "jsxImportSource": "preact"
   },
   "lock": false
 }

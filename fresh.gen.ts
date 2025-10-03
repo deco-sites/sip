@@ -3,14 +3,46 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
-
+import * as $AnimatedLogoIsland from "./islands/AnimatedLogoIsland.tsx";
+import * as $AnimatedTiltedHighlightIsland from "./islands/AnimatedTiltedHighlightIsland.tsx";
+import * as $CarouselNavigationIsland from "./islands/CarouselNavigationIsland.tsx";
+import * as $CountUpIsland from "./islands/CountUpIsland.tsx";
+import * as $CountrySelectorIsland from "./islands/CountrySelectorIsland.tsx";
+import * as $HoverVideoIsland from "./islands/HoverVideoIsland.tsx";
+import * as $LineMotionIsland from "./islands/LineMotionIsland.tsx";
+import * as $MobileMenuIsland from "./islands/MobileMenuIsland.tsx";
+import * as $ScrollJackingHeadlineIsland from "./islands/ScrollJackingHeadlineIsland.tsx";
+import * as $ScrollTextMotionIsland from "./islands/ScrollTextMotionIsland.tsx";
+import * as $ScrollTriggeredTextMotionIsland from "./islands/ScrollTriggeredTextMotionIsland.tsx";
+import * as $SmoothScroll from "./islands/SmoothScroll.tsx";
+import * as $TextMotionIsland from "./islands/TextMotionIsland.tsx";
+import * as $ThemeObserver from "./islands/ThemeObserver.tsx";
+import * as $VideoScaleIsland from "./islands/VideoScaleIsland.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/_app.tsx": $_app,
   },
-  islands: {},
+  islands: {
+    "./islands/AnimatedLogoIsland.tsx": $AnimatedLogoIsland,
+    "./islands/AnimatedTiltedHighlightIsland.tsx":
+      $AnimatedTiltedHighlightIsland,
+    "./islands/CarouselNavigationIsland.tsx": $CarouselNavigationIsland,
+    "./islands/CountUpIsland.tsx": $CountUpIsland,
+    "./islands/CountrySelectorIsland.tsx": $CountrySelectorIsland,
+    "./islands/HoverVideoIsland.tsx": $HoverVideoIsland,
+    "./islands/LineMotionIsland.tsx": $LineMotionIsland,
+    "./islands/MobileMenuIsland.tsx": $MobileMenuIsland,
+    "./islands/ScrollJackingHeadlineIsland.tsx": $ScrollJackingHeadlineIsland,
+    "./islands/ScrollTextMotionIsland.tsx": $ScrollTextMotionIsland,
+    "./islands/ScrollTriggeredTextMotionIsland.tsx":
+      $ScrollTriggeredTextMotionIsland,
+    "./islands/SmoothScroll.tsx": $SmoothScroll,
+    "./islands/TextMotionIsland.tsx": $TextMotionIsland,
+    "./islands/ThemeObserver.tsx": $ThemeObserver,
+    "./islands/VideoScaleIsland.tsx": $VideoScaleIsland,
+  },
   baseUrl: import.meta.url,
 } satisfies Manifest;
 

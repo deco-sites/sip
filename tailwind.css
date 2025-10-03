@@ -1,45 +1,183 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-
-  /* Allow changing font family via CMS */
-  html {
-    font-family: var(--font-family);
-  }
-
-  /** Remove default styles from input[type=number] */
-  input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  input[type=number] {
-    -moz-appearance: textfield;
-    appearance: textfield;
-  }
+/* Graphik Font */
+@font-face {
+  font-family: "Graphik";
+  src: url("https://cdn.jsdelivr.net/npm/@fontsource/graphik@1.0.0/files/graphik-latin-400-normal.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-@layer components {
-
-  /** Prevent scroll when modal is open */
-  .no-scroll {
-    overflow: hidden;
-    height: 100vh;
-  }
+@font-face {
+  font-family: "Graphik";
+  src: url("https://cdn.jsdelivr.net/npm/@fontsource/graphik@1.0.0/files/graphik-latin-500-normal.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
-@layer utilities {
+@font-face {
+  font-family: "Graphik";
+  src: url("https://cdn.jsdelivr.net/npm/@fontsource/graphik@1.0.0/files/graphik-latin-600-normal.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 
-  /** Remove scrollbar from overflow-auto */
-  .scrollbar-none {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
+@font-face {
+  font-family: "Graphik";
+  src: url("https://cdn.jsdelivr.net/npm/@fontsource/graphik@1.0.0/files/graphik-latin-700-normal.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
-  .scrollbar-none::-webkit-scrollbar {
-    display: none;
-  }
+/* Make CSS variables animatable using @property */
+@property --color-background {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: oklch(0.2014 0.0046 196.79);
+}
+
+@property --color-foreground {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: oklch(0.9026 0.0056 183.02);
+}
+
+@property --color-muted {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: oklch(0.3869 0.0105 196.73);
+}
+
+@property --color-accent {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: oklch(0.93 0.23 123);
+}
+
+@property --color-accent-foreground {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: oklch(0.2014 0.0046 196.79);
+}
+
+/* BrazilJS Theme Variables */
+:root {
+  --color-braziljs-00: oklch(0.9784 0.0011 197.14);
+  --color-braziljs-50: oklch(0.9491 0.0043 197.0);
+  --color-braziljs-100: oklch(0.9026 0.0056 183.02);
+  --color-braziljs-200: oklch(0.8439 0.0102 181.36);
+  --color-braziljs-300: oklch(0.7592 0.0148 185.83);
+  --color-braziljs-400: oklch(0.6812 0.0206 188.58);
+  --color-braziljs-500: oklch(0.5991 0.0247 186.02);
+  --color-braziljs-600: oklch(0.5153 0.0181 196.6);
+  --color-braziljs-700: oklch(0.4452 0.0114 196.75);
+  --color-braziljs-800: oklch(0.3869 0.0105 196.73);
+  --color-braziljs-900: oklch(0.2873 0.0085 196.69);
+  --color-braziljs-950: oklch(0.2014 0.0046 196.79);
+  --color-braziljs-primary: oklch(0.93 0.23 123);
+  --color-braziljs-primary-foreground: oklch(0.30 0.02 191);
+
+  /* Semantic tokens - Dark theme defaults */
+  --color-background: oklch(0.2014 0.0046 196.79);
+  --color-foreground: oklch(0.9026 0.0056 183.02);
+  --color-muted: oklch(0.3869 0.0105 196.73);
+  --color-accent: oklch(0.93 0.23 123);
+  --color-accent-foreground: oklch(0.2014 0.0046 196.79);
+}
+
+/* Apply theme to html element with smooth transitions */
+html {
+  transition:
+    --color-background 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    --color-foreground 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    --color-muted 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    --color-accent 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    --color-accent-foreground 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family:
+    "Graphik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family:
+    "Graphik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+}
+
+*, *::before, *::after {
+  font-family:
+    "Graphik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+}
+
+/* Locomotive Scroll container fixes */
+[data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-section] {
+  will-change: transform;
+}
+
+/* Dark theme - references to braziljs tokens */
+[data-theme="dark"] {
+  --color-background: var(--color-braziljs-950);
+  --color-foreground: var(--color-braziljs-100);
+  --color-muted: var(--color-braziljs-800);
+  --color-accent: var(--color-braziljs-primary);
+  --color-accent-foreground: var(--color-braziljs-950);
+}
+
+/* Green theme */
+[data-theme="green"] {
+  --color-background: var(--color-braziljs-primary);
+  --color-foreground: var(--color-braziljs-950);
+  --color-muted: var(--color-braziljs-800);
+  --color-accent: var(--color-braziljs-950);
+  --color-accent-foreground: var(--color-braziljs-100);
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --color-background: var(--color-braziljs-00);
+  --color-foreground: var(--color-braziljs-950);
+  --color-muted: var(--color-braziljs-800);
+  --color-accent: var(--color-braziljs-primary);
+  --color-accent-foreground: var(--color-braziljs-950);
+}
+
+/** Remove default styles from input[type=number] */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/** Prevent scroll when modal is open */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/** Remove scrollbar from overflow-auto */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }

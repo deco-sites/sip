@@ -1,0 +1,158 @@
+# DecoCMS Figma Implementation Guide
+
+You are converting a Figma design into a deco section component. Follow these
+EXACT requirements:
+
+## 🎨 STYLING CONSTRAINTS
+
+### Colors
+
+- **NEVER** use arbitrary color values like `bg-[#ff0000]` or `text-[#333333]`
+- **ALWAYS** use predefined design tokens: `dc-1`, `dc-2`, `dc-3`, ...,
+  `dc-950`, `primary-light`, etc.
+- If you need a color not in the design system, use the closest available token
+
+### Spacing & Sizing
+
+- **NEVER** use arbitrary values like `p-[32px]`, `w-[240px]`, `h-[500px]`
+- **ALWAYS** use Tailwind's standard utilities: `p-4`, `m-2`, `w-8`, `h-12`,
+  `gap-6`, etc.
+- Use consistent spacing scale: 1, 2, 3, 4, 6, 8, 10, 12, 16, 20, 24, etc.
+
+## 📱 RESPONSIVE REQUIREMENTS
+
+The Figma shows **desktop version only**. You MUST make it fully responsive:
+
+### Breakpoint Strategy
+
+- **Mobile (base)**: `px-4`, `py-8`, `text-2xl`, `gap-6`
+- **Tablet (sm:)**: `px-8`, `py-12`, `text-3xl`, `gap-8`
+- **Desktop (lg:)**: `px-16`, `py-16`, `text-5xl`, `gap-10`
+
+### Layout Patterns
+
+- Use `flex-col` on mobile, `lg:flex-row` on desktop
+- Scale typography: `text-3xl lg:text-5xl`
+- Progressive spacing: `gap-4 sm:gap-5 lg:gap-6`
+
+## 🔧 COMPONENT STRUCTURE
+
+### Use Existing Components
+
+**ALWAYS** leverage existing components from the codebase instead of recreating
+UI elements:
+
+- **Buttons**: Use `components/ui/Button.tsx` for all button elements
+- **Icons**: Use `components/ui/Icon.tsx` for SVG icons
+- **Badges**: Use `components/ui/MarkupBadge.tsx` for tags/labels
+- **Blog Elements**: Use components from `components/blog/` for blog-related UI
+
+Example imports and usage:
+
+```typescript
+import Button from "../../components/ui/Button.tsx";
+import Icon from "../../components/ui/Icon.tsx";
+import MarkupBadge from "../../components/ui/MarkupBadge.tsx";
+
+// In your component:
+<Button variant="primary" href={buttonLink}>
+  {buttonText}
+</Button>
+
+<Icon id="arrow-right" size={24} />
+
+<MarkupBadge text={badgeText} />
+```
+
+### Props Interface
+
+Make **EVERYTHING** editable via props:
+
+- All text content (headings, paragraphs, button labels)
+- All images and their alt text. You don't need to add anything like svg's or
+  images. I'll add them directly through our CMS, i just need to able to
+- All links and URLs
+- Colors, if customizable
+- Layout options (alignment, spacing variants)
+
+### Required Imports
+
+```typescript
+import { ImageWidget as Image } from "apps/admin/widgets.ts";
+import { Section } from "deco/blocks/section.ts";
+
+export interface Props {
+  // Define all editable properties here
+  title?: string;
+  description?: string;
+  image?: Image;
+  buttonText?: string;
+  buttonLink?: string;
+  // etc...
+}
+```
+
+### Component Export
+
+```typescript
+export default function SectionName(
+  { title, description, image, buttonText, buttonLink }: Props,
+) {
+  return (
+    <section className="...">
+      {/* Implementation */}
+    </section>
+  );
+}
+```
+
+## 📄 DATA POPULATION
+
+### Critical Rule: NO DEFAULT VALUES IN CODE
+
+- **NEVER** add default props inside the component code
+- **NEVER** use fallback values like `title || "Default Title"`
+- All actual content goes in the page's JSON file (`@pages-Home-12345.json`)
+
+### Example JSON Structure
+
+```json
+{
+  "sections": [
+    {
+      "__resolveType": "sections/YourSection.tsx",
+      "title": "Actual Title Here",
+      "description": "Actual description here",
+      "image": "https://actual-image-url.com/image.jpg",
+      "buttonText": "Click Me",
+      "buttonLink": "/actual-link"
+    }
+  ]
+}
+```
+
+## ✅ IMPLEMENTATION CHECKLIST
+
+Before submitting, verify:
+
+- [ ] No arbitrary color or spacing values used
+- [ ] Fully responsive across mobile/tablet/desktop
+- [ ] All content is prop-driven (no hardcoded text/images)
+- [ ] Props interface includes all editable elements
+- [ ] No default values in component code
+- [ ] **Uses existing UI components** (Button, Icon, MarkupBadge, etc.) or
+      create if they don't exist
+- [ ] Component follows DecoCMS section patterns
+- [ ] Matches Figma design visually on desktop
+- [ ] Gracefully adapts to smaller screens
+
+## 🚫 COMMON MISTAKES TO AVOID
+
+1. Using `bg-[#ffffff]` instead of `bg-white` or design tokens
+2. Hardcoding text like `<h1>Welcome</h1>` instead of `<h1>{title}</h1>`
+3. Adding fallbacks like `{title || "Default"}`
+4. Using arbitrary values like `w-[300px]` instead of `w-80`
+5. Not making the design responsive
+6. Forgetting to export the Props interface
+
+Follow this guide exactly to ensure consistent, maintainable deco components.
